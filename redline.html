@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redline Bus Fleet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    header button {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 20px;
+    }
+    header button:hover {
+      background-color: #005599;
+    }
+    main {
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #0073e6;
+      color: white;
+    }
+    .withdrawn-row {
+      background-color: red;
+      color: white;
+    }
+    .normal-row {
+      background-color: white;
+      color: black;
+    }
+    .withdrawn-row td{
+      background-color: red; /* Apply red background to all columns except Notes */
+      color: white;  /* Text remains white */
+    }
+    .notes {
+      color: black;  /* Default text color for Notes */
+      background-color: white;  /* Ensure Notes column has a white background */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Redline Buses Fleet</h1>
+    <!-- Home Button -->
+    <button onclick="window.location.href='Bus-fleet-lists-online.html'">Home</button>
+  </header>
+  <main>
+    <h2>Redline Buses Fleet</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Fleet Number</th>
+          <th>Registration Plate</th>
+          <th>Bus Model</th>
+          <th>New to</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="withdrawn-row">
+          <td>50301</td>
+          <td>LK55 KKD</td>
+          <td>Alexander Dennis Enviro400</td>
+          <td>Metroline Travel</td>
+          <td class=notes>Transferred to Red Rose Travel as 50546</td>
+        </tr>
+        <tr class="normal-row">
+          <td>50302</td>
+          <td>MK63 XAT</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50303</td>
+          <td>YX13 BNV</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Nottingham City Transport</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50304</td>
+          <td>YX65 RGV</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50306</td>
+          <td>YX12 DKA</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50307</td>
+          <td>Y703 TGH</td>
+          <td>Volvo B7TL Plaxton President</td>
+          <td>London Central</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50308</td>
+          <td>X154 FBB</td>
+          <td>Volvo B7TL Plaxton President</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50310</td>
+          <td>MX63 XAS</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50312</td>
+          <td>V185 OOE</td>
+          <td>Volvo B7TL Alexander ALX400</td>
+          <td>London United</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50313</td>
+          <td>LF52 UPO</td>
+          <td>Volvo B7TL Wright Eclipse Gemini</td>
+          <td>Arriva London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50314</td>
+          <td>MX09 HJN</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>MK Metro</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50315</td>
+          <td>Y734 TGH</td>
+          <td>Volvo B7TL Plaxton President</td>
+          <td>London Central</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50316</td>
+          <td>YX10 FEF</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Abellio London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50317</td>
+          <td>YX09 FMD</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50319</td>
+          <td>YX63 LJE</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Nottingham City Transport</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50321</td>
+          <td>MK63 XAR</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50322</td>
+          <td>MX09 HHL</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>MK Metro</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50325</td>
+          <td>V112 LGC</td>
+          <td>Volvo B7TL Alexander ALX400</td>
+          <td>London Central</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50326</td>
+          <td>V119 LGC</td>
+          <td>Volvo B7TL Alexander ALX400</td>
+          <td>London Central</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50328</td>
+          <td>MX60 GXJ</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+	</tr>
+        <tr class="normal-row">
+          <td>50329</td>
+          <td>MX60 GXK</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+	</tr>
+        <tr class="normal-row">
+          <td>50330</td>
+          <td>MX13 BCF</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50331</td>
+          <td>MX13 BCK</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50333</td>
+          <td>YX10 FFJ</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Abellio London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50334</td>
+          <td>W25 RRT</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Red Rose Travel, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>50336</td>
+          <td>KN04 XCT</td>
+          <td>Dennis Dart MPD Plaxton Pointer 2</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50340</td>
+          <td>SK52 MPU</td>
+          <td>Volvo B7TL Alexander ALX400</td>
+          <td>London United</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50341</td>
+          <td>MX09 HHN</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>MK Metro</td>
+          <td></td>
+	</tr>
+        <tr class="normal-row">
+          <td>50348</td>
+          <td>MX61 BAO</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Red Rose Travel, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50349</td>
+          <td>MX61 BAU</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Red Rose Travel, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50350</td>
+          <td>T25 RRT</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Red Rose Travel, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50352</td>
+          <td>YX08 MDY</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>London United</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50354</td>
+          <td>AE07 DZB</td>
+          <td>ADL Dart SLF MCV Evolution</td>
+          <td>Cavalier Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50355</td>
+          <td>AE07 DZC</td>
+          <td>ADL Dart SLF MCV Evolution</td>
+          <td>Cavalier Travel</td>
+          <td></td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>50356</td>
+          <td>KH55 KMH</td>
+          <td>TransBus Enviro300</td>
+          <td></td>
+          <td class="notes">Transferred to Red Rose Travel</td>
+        </tr>
+        <tr class="normal-row">
+          <td>50357</td>
+          <td>LJ09 KPZ</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Arriva London</td>
+          <td></td>
+	</tr>
+        <tr class="normal-row">
+          <td>50359</td>
+          <td>LK09 KPL</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Arriva London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50362</td>
+          <td>LK06 FLB</td>
+          <td>Alexander Dennis Enviro400</td>
+          <td>Metroline Travel</td>
+          <td></td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>50363</td>
+          <td>PN52 XBP</td>
+          <td>Volvo B7TL ELC Vyking</td>
+          <td>Richardsons Travel</td>
+          <td class="notes">Bus is currently not operational</td>
+        </tr>
+        <tr class="normal-row">
+          <td>50364</td>
+          <td>LK55 KKH</td>
+          <td>Alexander Dennis Enviro400</td>
+          <td>Metroline Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50366</td>
+          <td>PL08 YMA</td>
+          <td>Volvo B9TL Optare Olympus</td>
+          <td>Sanders Coaches</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50367</td>
+          <td>PL08 YLZ</td>
+          <td>Volvo B9TL Optare Olympus</td>
+          <td>Sanders Coaches</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50368</td>
+          <td>PO58 NPP</td>
+          <td>Volvo B9TL Optare Olympus</td>
+          <td>Ensign Bus</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50369</td>
+          <td>LK55 KKZ</td>
+          <td>Alexander Dennis Enviro400</td>
+          <td>Metroline Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50371</td>
+          <td>YX12 AXU</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50372</td>
+          <td>YX12 AZN</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50373</td>
+          <td>YX12 AEW</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50374</td>
+          <td>BV73 MTE</td>
+          <td>Volvo B8RLE MCV Evora</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50375</td>
+          <td>BV73 MTF</td>
+          <td>Volvo B8RLE MCV Evora</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50376</td>
+          <td>BV73 MTJ</td>
+          <td>Volvo B8RLE MCV Evora</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50377</td>
+          <td>BV73 MTK</td>
+          <td>Volvo B8RLE MCV Evora</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50378</td>
+          <td>BV73 MLX</td>
+          <td>Volvo B8RLE MCV Evora</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50379</td>
+          <td>BV73 MLY</td>
+          <td>Volvo B8RLE MCV Evora</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50380</td>
+          <td>BV73 MME</td>
+          <td>Volvo B8RLE MCV Evora</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50381</td>
+          <td>BV73 MLZ</td>
+          <td>Volvo B8RLE MCV Evora</td>
+          <td>Redline Buses, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50382</td>
+          <td>YX12 AGY</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50383</td>
+          <td>BV13 ZCZ</td>
+          <td>Volvo B9TL MCV DD103</td>
+          <td>Golden Tours</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50384</td>
+          <td>BF62 UYN</td>
+          <td>Volvo B9TL MCV DD103</td>
+          <td>Golden Tours</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50385</td>
+          <td>BF67 GJV</td>
+          <td>Volvo B5TL Wright Eclipse Gemini 3</td>
+          <td>University of Wolverhampton</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50386</td>
+          <td>BF67 GJY</td>
+          <td>Volvo B5TL Wright Eclipse Gemini 3</td>
+          <td>University of Wolverhampton</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50387</td>
+          <td>YY64 YKD</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>McGill's</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50388</td>
+          <td>YY64 GWP</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>McGill's</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50389</td>
+          <td>YY64 YKH</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>McGill's</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50390</td>
+          <td>BF63 HEJ</td>
+          <td>Volvo B9TL MCV DD103</td>
+          <td>Golden Tours</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50391</td>
+          <td>YY64 YKG</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>McGill's</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50392</td>
+          <td>BF67 GJO</td>
+          <td>Volvo B5TL Wright Eclipse Gemini 3</td>
+          <td>University of Wolverhampton</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    <p>© Bus Fleet Lists.online 2024</p>
+  </footer>
+</body>
+</html>
