@@ -1,1 +1,107 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z & S Transport Bus Fleet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    header button {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 20px;
+    }
+    header button:hover {
+      background-color: #005599;
+    }
+    main {
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #0073e6;
+      color: white;
+    }
+    .withdrawn-row {
+      background-color: red;
+      color: white;
+    }
+    .normal-row {
+      background-color: white;
+      color: black;
+    }
+    .withdrawn-row td{
+      background-color: red; /* Apply red background to all columns except Notes */
+      color: white;  /* Text remains white */
+    }
+    .notes {
+      color: black;  /* Default text color for Notes */
+      background-color: white;  /* Ensure Notes column has a white background */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Z & S Transport Fleet</h1>
+    <!-- Home Button -->
+    <button onclick="window.location.href='index.html'">Home</button>
+  </header>
+  <main>
+    <h2>Z & S Transport Buses Fleet</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Fleet Number</th>
+          <th>Registration Plate</th>
+          <th>Bus Model</th>
+          <th>New to</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="withdrawn-row">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class=notes></td>
+        </tr>
+        <tr class="normal-row">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    <p>© Bus Fleet Lists.online 2024</p>
+  </footer>
+</body>
+</html>
