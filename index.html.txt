@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>busfleetlists.online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      text-align: center;
+    }
+    header {
+      background: #0073e6;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #004080;
+      padding: 0.5rem;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: block;
+    }
+    nav ul li:hover > a {
+      background: #0059b3;
+    }
+    nav ul li ul {
+      position: absolute;
+      background: #004080;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: none;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li {
+      width: 200px;
+    }
+    main {
+      padding: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #0073e6;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bus Fleet Lists.online</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="#">Operators</a>
+        <ul>
+          <li><a href="britannia-bus.html">Britannia Bus</a></li>
+          <li><a href="red-eagle.html">Red Eagle</a></li>
+          <li><a href="redline.html">Redline</a></li>
+          <li><a href="red-rose-travel.html">Red Rose Travel</a></li>
+          <!-- Add more operators here as needed -->
+        </ul>
+    </ul>
+  </nav>
+  <main>
+    <h2>Welcome to Bus Fleet Lists.online</h2>
+    <p>Select an operator from the dropdown menu above to view its fleet details.</p>
+  </main>
+<main>
+  <div class="search-form">
+    <label for="busReg" class="search-label">Search for buses by License Plate (include spaces):</label>
+    <input type="text" id="busReg" placeholder="Enter bus registration" />
+    <button onclick="searchBus()">Search</button>
+  </div>
+
+  <div id="message" class="message"></div>
+</main>
+
+<style>
+  .search-form {
+    margin: 20px;
+    text-align: center;
+  }
+
+  .search-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .search-form input {
+    padding: 8px;
+    font-size: 14px;
+    margin-right: 4px;
+    text-align: center;
+  }
+
+  .search-form button {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  #message {
+    text-align: center; /* Center-align the content */
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+</style>
+
+  <script>
+    // Define a list of bus registrations and corresponding fleet numbers and URLs
+    const fleetData = {
+      "E1 RRT": { fleetNumber: "50531", url: "red-rose-travel.html" },
+      "E2 RRT": { fleetNumber: "50501", url: "red-rose-travel.html" },
+      "E3 RRT": { fleetNumber: "50502", url: "red-rose-travel.html" },
+      "E4 RRT": { fleetNumber: "50526", url: "red-rose-travel.html" },
+      "E5 RRT": { fleetNumber: "50522", url: "red-rose-travel.html" },
+      "E6 RRT": { fleetNumber: "50505", url: "red-rose-travel.html" },
+      "E7 RRT": { fleetNumber: "50506", url: "red-rose-travel.html" },
+      "E8 RRT": { fleetNumber: "50503", url: "red-rose-travel.html" },
+      "E9 RRT": { fleetNumber: "50504", url: "red-rose-travel.html" },
+      "E10 RRT": { fleetNumber: "50543", url: "red-rose-travel.html" },
+      "E11 RRT": { fleetNumber: "50564", url: "red-rose-travel.html" },
+      "E12 RRT": { fleetNumber: "50563", url: "red-rose-travel.html" },
+      "E13 RRT": { fleetNumber: "N/A", url: "red-rose-travel.html" },
+      "E14 RRT": { fleetNumber: "50518", url: "red-rose-travel.html" },
+      "E15 RRT": { fleetNumber: "N/A", url: "red-rose-travel.html" },
+      "E16 RRT": { fleetNumber: "50530", url: "red-rose-travel.html" },
+      "E17 RRT": { fleetNumber: "50532", url: "red-rose-travel.html" },
+      "E18 RRT": { fleetNumber: "50513", url: "red-rose-travel.html" },
+      "E19 RRT": { fleetNumber: "50561", url: "red-rose-travel.html" },
+      "E20 RRT": { fleetNumber: "50562", url: "red-rose-travel.html" },
+      "Y21 RRT": { fleetNumber: "50517", url: "red-rose-travel.html" },
+      "Y22 RRT": { fleetNumber: "50548", url: "red-rose-travel.html" },
+      "Y23 RRT": { fleetNumber: "50547", url: "red-rose-travel.html" },
+      "Y24 RRT": { fleetNumber: "50556", url: "red-rose-travel.html" },
+      "Y25 RRT": { fleetNumber: "50554", url: "red-rose-travel.html" },
+      "Y26 RRT": { fleetNumber: "50558", url: "red-rose-travel.html" },
+      "Y27 RRT": { fleetNumber: "50555", url: "red-rose-travel.html" },
+      "Y28 RRT": { fleetNumber: "50551", url: "red-rose-travel.html" },
+      "Y29 RRT": { fleetNumber: "50552", url: "red-rose-travel.html" },
+      "Y30 RRT": { fleetNumber: "50553", url: "red-rose-travel.html" },
+      "W495 WGH": { fleetNumber: "50527", url: "red-rose-travel.html" },
+      "W496 WGH": { fleetNumber: "50528", url: "red-rose-travel.html" },
+      "Y358 LCK": { fleetNumber: "50519", url: "red-rose-travel.html" },
+      "Y359 LCK": { fleetNumber: "50520", url: "red-rose-travel.html" },
+      "HJ02 HFD": { fleetNumber: "50507", url: "red-rose-travel.html" },
+      "HJ02 HFF": { fleetNumber: "50508", url: "red-rose-travel.html" },
+      "KF52 NBN": { fleetNumber: "N/A", url: "red-rose-travel.html" },
+      "AA53 GHA": { fleetNumber: "N/A", url: "red-rose-travel.html" },
+      "SN53 LWR": { fleetNumber: "50529", url: "red-rose-travel.html" },
+      "PG04 WHX": { fleetNumber: "50536", url: "red-rose-travel.html" },
+      "HW54 BTV": { fleetNumber: "50511", url: "red-rose-travel.html" },
+      "BU05 HFX": { fleetNumber: "50557", url: "red-rose-travel.html" },
+      "BU05 HFZ": { fleetNumber: "50525", url: "red-rose-travel.html" },
+      "LK08 NVL": { fleetNumber: "50534", url: "red-rose-travel.html" },
+      "YX10 BGK": { fleetNumber: "50509", url: "red-rose-travel.html" },
+      "YX10 BGV": { fleetNumber: "50514", url: "red-rose-travel.html" },
+      "YX10 BGY": { fleetNumber: "50524", url: "red-rose-travel.html" },
+      "YU15 AAF": { fleetNumber: "N/A", url: "red-rose-travel.html" },
+      "GW65 GSW": { fleetNumber: "50510", url: "red-rose-travel.html" },
+      "JW65 GSW": { fleetNumber: "50521", url: "red-rose-travel.html" },
+      "SF66 ARV": { fleetNumber: "50523", url: "red-rose-travel.html" },
+      "SF66 ARW": { fleetNumber: "50533", url: "red-rose-travel.html" },
+      "YX67 UYS": { fleetNumber: "N/A", url: "red-rose-travel.html" },
+      "YX18 KOU": { fleetNumber: "50515", url: "red-rose-travel.html" },
+      "YX18 KOV": { fleetNumber: "50512", url: "red-rose-travel.html" },
+      "YX18 KOW": { fleetNumber: "50516", url: "red-rose-travel.html" },
+      "YX22 OKA": { fleetNumber: "N/A", url: "red-rose-travel.html" },
+      "YX22 OKB": { fleetNumber: "N/A", url: "red-rose-travel.html" },
+      "YX22 OKC": { fleetNumber: "N/A", url: "red-rose-travel.html" },
+      "YX22 OKD": { fleetNumber: "N/A", url: "red-rose-travel.html" },
+      "YX72 ONA": { fleetNumber: "N/A", url: "red-rose-travel.html" },
+      // Add more buses as needed
+    };
+
+    // Function to search for the bus and display fleet number information
+    function searchBus() {
+      const busReg = document.getElementById('busReg').value.trim().toUpperCase(); // Get and normalize the input
+      const messageDiv = document.getElementById('message'); // Where we show messages
+
+      if (busReg in fleetData) {
+        // Immediately display the fleet number and redirect message
+        messageDiv.innerHTML = `Bus found! The fleet number is ${fleetData[busReg].fleetNumber}.<br>Redirecting to fleet list...`;
+
+        // Redirect after 3 seconds
+        setTimeout(function() {
+          window.location.href = fleetData[busReg].url;
+        }, 3000); // 3 seconds delay before redirect
+      } else {
+        // Show a message if the bus registration is not found
+        messageDiv.innerHTML = "Bus registration not found. Please check the registration and try again.";
+      }
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    /* Base body and page styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: 
+      color: white;
+    }
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    header button {
+      background-color: #f4f4f4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 20px;
+    }
+    header button:hover {
+      background-color: #f4f4f4;
+    }
+
+    /* Contact Form Styles */
+    .contact-form {
+      background: #0073e6;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      margin: 20px auto;
+      color: white;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+    .contact-form input {
+      background-color: #f1f1f1;
+      color: #333;
+    }
+    .contact-form textarea {
+      background-color: #f1f1f1;
+      color: #333;
+      resize: vertical;
+      min-height: 150px;
+    }
+    .contact-form button {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .contact-form button:hover {
+      background-color: #005599;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h2>Want to help contribute or have a query?</h2>
+    <p>Leave a message for the team</p>
+  </main>
+  <main>
+    <form action="https://formspree.io/f/xpwznjle" method="POST" class="contact-form">
+      <label for="name">Your Name/User Info:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Your Email (if applicable):</label>
+      <input type="email" id="email" name="_replyto">
+      
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+</body>
+</html>
+  <footer>
+	All fleet lists on this site are unoffical and are subject to inaccuracies<br>
+    &copy; 2024 Bus Fleet Lists.online
+  </footer>
+</body>
+</html>
