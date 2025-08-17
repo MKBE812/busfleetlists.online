@@ -1,1 +1,282 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z & S Transport Bus Fleet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    header button {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 20px;
+    }
+    header button:hover {
+      background-color: #005599;
+    }
+    main {
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #0073e6;
+      color: white;
+    }
+    .withdrawn-row {
+      background-color: red;
+      color: white;
+    }
+    .normal-row {
+      background-color: white;
+      color: black;
+    }
+    .withdrawn-row td{
+      background-color: red; /* Apply red background to all columns except Notes */
+      color: white;  /* Text remains white */
+    }
+    .notes {
+      color: black;  /* Default text color for Notes */
+      background-color: white;  /* Ensure Notes column has a white background */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Z & S Transport Fleet</h1>
+    <!-- Home Button -->
+    <button onclick="window.location.href='index.html'">Home</button>
+  </header>
+  <main>
+    <h2>Z & S Transport Buses Fleet</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Fleet Number</th>
+          <th>Registration Plate</th>
+          <th>Bus Model</th>
+          <th>New to</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="normal-row">
+          <td>138</td>
+          <td>MX12 JXA</td>
+          <td>Alexander Dennis E20D Enviro200</td>
+          <td>A2B Travel, Birkenhead</td>
+          <td></td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>150</td>
+          <td>SR54 ZNS</td>
+          <td>Alexander Dennis Enviro200 Dart</td>
+          <td>Z & S Transport, Aylesbury</td>
+          <td>Withdrawn</td>
+        </tr>
+        <tr class="normal-row">
+          <td>162</td>
+          <td>YX16 OHV</td>
+          <td>Alexander Dennis E20D Enviro200</td>
+          <td>TLC Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>166</td>
+          <td>MX62 GNJ</td>
+          <td>Alexander Dennis E20D Enviro200</td>
+          <td>Ace Travel, Aintree</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>168</td>
+          <td>MK63 WZV</td>
+          <td>Alexander Dennis E20D Enviro200</td>
+          <td>South Wales Transport</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>172</td>
+          <td>OU12 CZV</td>
+          <td>Alexander Dennis E20D Enviro200</td>
+          <td>Z & S Transport, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>174</td>
+          <td>OU12 CZW</td>
+          <td>Alexander Dennis E20D Enviro200</td>
+          <td>Z & S Transport, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>176</td>
+          <td>MX62 GYC</td>
+          <td>Alexander Dennis E20D Enviro200</td>
+          <td>Ace Travel, Aintree</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>178</td>
+          <td>KX57 AAO</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td></td>
+          <td class="notes">Reinstated for new Route SR1</td>
+        </tr>
+        <tr class="normal-row">
+          <td>180</td>
+          <td>MX59 AVV</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Maytree Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>188</td>
+          <td>BU55 KBK</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Leven Valley, Middlesborough</td>
+          <td>Previous Regs: MX59 ZNK, T11 GAJ</td>
+        </tr>
+        <tr class="normal-row">
+          <td>190</td>
+          <td>MX11 CZK</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td></td>
+          <td class="notes">Reinstated 14/7/25</td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>270</td>
+          <td> </td>
+          <td>Dennis Trident Plaxton President</td>
+          <td>Metroline Travel</td>
+          <td class="notes">Scrapped</td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>272</td>
+          <td>LR02 BDF</td>
+          <td>Dennis Trident Plaxton President</td>
+          <td>Metroline Travel</td>
+          <td class="notes">Withdrawn pending scrap</td>
+        </tr>
+        <tr class="normal-row">
+          <td>274</td>
+          <td>LR02 BBZ</td>
+          <td>Dennis Trident Plaxton President</td>
+          <td>Metroline Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>276</td>
+          <td>LR02 BDO</td>
+          <td>Dennis Trident Plaxton President</td>
+          <td>Metroline Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>278</td>
+          <td>LR02 BCU</td>
+          <td>Dennis Trident Plaxton President</td>
+          <td>Metroline Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>280</td>
+          <td>LR02 BBO</td>
+          <td>Dennis Trident Plaxton President</td>
+          <td>Metroline Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>282</td>
+          <td>LN51 KYH</td>
+          <td>Dennis Trident Plaxton President</td>
+          <td>Metroline Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>284</td>
+          <td>LN51 KYU</td>
+          <td>Dennis Trident Plaxton President</td>
+          <td>Metroline Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+        	<td>286</td>
+        	<td>SN06 BNJ</td>
+        	<td>Alexander Dennis Enviro400</td>
+        	<td>London General</td>
+        	<td></td>
+      	</tr>
+        <tr class="normal-row">
+        	<td>288</td>
+        	<td>SN06 BNF</td>
+        	<td>Alexander Dennis Enviro400</td>
+        	<td>London General</td>
+        	<td></td>
+      	</tr>
+        <tr class="normal-row">
+          <td>377</td>
+          <td>BV18 XZS</td>
+          <td>Volvo B11R VDL Jonckheere SHV</td>
+          <td>Z & S Transport, Aylesbury</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>381</td>
+          <td>FJ05 AOK</td>
+          <td>Volvo B12M Jonckheere Mistral</td>
+        	<td>Plastow's Travel</td>
+          <td></td>
+				</tr>
+        <tr class="normal-row">
+          <td>383</td>
+          <td>FJ06 ZKZ</td>
+          <td>Volvo B7R Sunsundegui</td>
+          <td>Z & S Transport, Aylesbury</td>
+          <td></td>
+      	</tr>
+    	  <tr class="normal-row">
+        	<td>393</td>
+        	<td>SJZ 9743</td>
+        	<td>Volvo B10M-62 Jonckheere Mistral 50</td>
+        	<td>Callinan Coaches</td>
+        	<td class="notes">Previous Regs: Y814 AJF, 01-G-4894</td>
+      	</tr>
+        <tr class="normal-row">
+          <td>397</td>
+          <td>SK22 BVG</td>
+          <td>Alexander Dennis Enviro400 MMC</td>
+          <td>Z & S Transport, Aylesbury</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    <p>© Bus Fleet Lists.online 2024</p>
+  </footer>
+</body>
+</html>
