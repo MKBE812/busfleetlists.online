@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Eagle Bus Fleet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    header button {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 20px;
+    }
+    header button:hover {
+      background-color: #005599;
+    }
+    main {
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #0073e6;
+      color: white;
+    }
+    .withdrawn-row {
+      background-color: red;
+      color: white;
+    }
+    .normal-row {
+      background-color: white;
+      color: black;
+    }
+    .withdrawn-row td{
+      background-color: red; /* Apply red background to all columns except Notes */
+      color: white;  /* Text remains white */
+    }
+    .notes {
+      color: black;  /* Default text color for Notes */
+      background-color: white;  /* Ensure Notes column has a white background */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Red Eagle Bus Fleet</h1>
+    <!-- Home Button -->
+    <button onclick="window.location.href='index.html'">Home</button>
+  </header>
+  <main>
+    <h2>Red Eagle Fleet</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Fleet Number</th>
+          <th>Fuel ID</th>
+          <th>Registration Plate</th>
+          <th>Bus Model</th>
+          <th>New to</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="normal-row">
+          <td>50100</td>
+          <td></td>
+          <td>GX57 BXH</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Southdown Buses</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50101</td>
+          <td></td>
+          <td>WX08 LNO</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First Bristol, Bath & the West</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50102</td>
+          <td></td>
+          <td>YX15 XMP</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Bus4us, Braintree</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50103</td>
+          <td></td>
+          <td>YY67 HBK</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Manchester Community Transport</td>
+          <td></td>
+				</tr>
+        <tr class="normal-row">
+          <td>50104</td>
+        	<td></td>
+          <td>MX13 BAU</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Padarn Buses, Llanberis</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50105</td>
+          <td></td>
+          <td>YX67 VGL</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>White Bus Services</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50106</td>
+        	<td></td>
+          <td>YX10 FEP</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Abellio London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50107</td>
+         	<td></td>
+          <td>YX61 GBE</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Abellio London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50108</td>
+         	<td>621</td>
+          <td>YX10 BGU</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50109</td>
+          <td></td>
+          <td>MV59 ACX</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Leven Valley, Middlesborough</td>
+          <td class="notes">Previous Registration: T18 GAJ</td>
+        </tr>
+        <tr class="normal-row">
+          <td>50110</td>
+          <td></td>
+          <td>WX08 LNN</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First Bristol, Bath & the West</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50111</td>
+          <td></td>
+          <td>YY15 NHJ</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Solus Coaches, Tamworth</td>
+          <td></td>
+				</tr>
+        <tr class="normal-row">
+          <td>50112</td>
+          <td>133</td>
+          <td>YX12 AMK</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First Centrewest</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50113</td>
+          <td></td>
+          <td>YX60 BZO</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50114</td>
+          <td></td>
+          <td>MV59 ASX</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Leven Valley, Middlesborough</td>
+          <td class="notes">Previous Registration: T9 BHN</td>
+        </tr>
+        <tr class="normal-row">
+          <td>50115</td>
+          <td></td>
+          <td>MX14 FUT</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Coastal & Country, Whitby</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50116</td>
+          <td></td>
+          <td>YX10 TAT</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>JPT Buses</td>
+          <td class=notes>Previous reg: VT10 JPT</td>
+        </tr>
+        <tr class="normal-row">
+          <td>50117</td>
+          <td>144</td>
+          <td>YX08 MDZ</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>London United</td>
+          <td class></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50118</td>
+          <td></td>
+          <td>YX10 FFB</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Abellio London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50119</td>
+          <td></td>
+          <td>YW68 PBX</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Johnsons Excelbus</td>
+          <td></td>
+				</tr>
+        <tr class="normal-row">
+          <td>50120</td>
+         	<td></td>
+          <td>MX10 KNR</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Coachmasters, Rochdale</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50121</td>
+          <td>147</td>
+          <td>YX09 FMK</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First Centrewest</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50122</td>
+          <td>141</td>
+          <td>YX08 MFO</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>London United</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50123</td>
+          <td>624</td>
+          <td>YX10 BHA</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Stewarts Coaches, Reading</td>
+          <td></td>
+				</tr>
+        <tr class="normal-row">
+          <td>50124</td>
+          <td></td>
+          <td>LJ08 CZP</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Travel London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50125</td>
+          <td></td>
+          <td>LJ08 CZY</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Travel London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50126</td>
+          <td></td>
+          <td>W17 ADL</td>
+          <td>ADL Enviro200 MMC</td>
+          <td>Whitelaws, Stonehouse</td>
+          <td class="notes"></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50127</td>
+          <td></td>
+          <td>LX11 AVW</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Stagecoach London</td>
+          <td></td>
+				</tr>
+        <tr class="normal-row">
+          <td>50129</td>
+          <td></td>
+          <td>YY15 NJN</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Dews Coaches, Chatteris</td>
+          <td></td>
+				</tr>
+        <tr class="normal-row">
+          <td>50130</td>
+         	<td></td>
+          <td>NXZ 9337</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Manchester Community Transport</td>
+          <td class="notes">Previous reg: MX59 NWN</td>
+        </tr>
+        <tr class="normal-row">
+          <td>50131</td>
+          <td>614</td>
+          <td>YX09 AFJ</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First Centrewest</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50132</td>
+          <td>AJY</td>
+          <td>YX12 AJY</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First Centrewest</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50133</td>
+          <td></td>
+          <td>YY15 GDK</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Gateshead Central Taxis</td>
+          <td></td>
+				</tr>
+        <tr class="normal-row">
+          <td>50134</td>
+          <td></td>
+          <td>SN15 LRL</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>TLC Travel</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50135</td>
+          <td></td>
+          <td>YX61 GBF</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Abellio London</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50136</td>
+          <td></td>
+          <td>LK08 FNF</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First Centrewest</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50137</td>
+          <td></td>
+          <td>YX58 DWV</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First Centrewest</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50138</td>
+          <td></td>
+          <td>SC67 ZHB</td>
+          <td>ADL Enviro200 MMC</td>
+          <td>Whitelaws, Stonehouse</td>
+          <td class="notes">Previous reg: G4 WHW</td>
+        </tr>
+        <tr class="normal-row">
+          <td>50139</td>
+          <td></td>
+          <td>YX72 ONK</td>
+          <td>ADL Enviro200 MMC</td>
+          <td>Edinburgh Coach Lines</td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50140</td>
+          <td></td>
+          <td>YX21 RUU</td>
+          <td>ADL Enviro200 MMC</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="normal-row">
+          <td>50141</td>
+          <td></td>
+          <td>YX21 RUV</td>
+          <td>ADL Enviro200 MMC</td>
+          <td></td>
+          <td></td>
+        </tr>
+		<tr class="normal-row">
+          <td>50142</td>
+          <td>742</td>
+          <td>YX71 OHD</td>
+          <td>ADL Enviro200 MMC</td>
+          <td>Atlantic Travel, Bolton</td>
+          <td></td>
+        </tr>
+		<tr class="normal-row">
+          <td>50143</td>
+          <td>743</td>
+          <td>YX71 OHE</td>
+          <td>ADL Enviro200 MMC</td>
+          <td>Atlantic Travel, Bolton</td>
+          <td></td>
+        </tr>
+		<tr class="normal-row">
+          <td>50146</td>
+          <td>746</td>
+          <td>YX71 OHA</td>
+          <td>ADL Enviro200 MMC</td>
+          <td>Atlantic Travel, Bolton</td>
+          <td></td>
+        </tr>
+		<tr class="normal-row">
+          <td>50147</td>
+          <td>744</td>
+          <td>YX71 OHF</td>
+          <td>ADL Enviro200 MMC</td>
+          <td>Atlantic Travel, Bolton</td>
+          <td></td>
+        </tr>
+		<tr class="normal-row">
+          <td>50148</td>
+          <td></td>
+          <td>SN16 OSY</td>
+          <td>Alexander Dennis E20D Enviro200</td>
+          <td>Manchester Airport</td>
+          <td class=notes>Previous Reg: YU15 AAF</td>
+        </tr>
+		<tr class="normal-row">
+          <td>50149</td>
+          <td>67</td>
+          <td>YX67 UYS</td>
+          <td>Alexander Dennis E20D Enviro200</td>
+          <td>Leeds Bradford Airport</td>
+          <td class=notes>Previous Reg: YU15 AFS</td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>50202</td>
+          <td></td>
+          <td>KN04 XCU</td>
+          <td>Dennis Dart MPD Plaxton Pointer 2</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>50203</td>
+          <td></td>
+          <td>KX05 KFF</td>
+          <td>Dennis Dart SLF Plaxton Pointer 2</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>50205</td>
+         	<td></td>
+          <td>LX11 AVV</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Stagecoach London</td>
+          <td class=notes>Scrapped following RTC</td>
+        </tr>
+      	<tr class="withdrawn-row">
+          <td>50207</td>
+      		<td></td>
+          <td>FP04 CFE</td>
+          <td>Dennis Dart MPD Plaxton Pointer 2</td>
+          <td>Littles Travel, Ilkeston</td>
+          <td></td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>50211</td>
+          <td></td>
+          <td>WX08 LNP</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>First Bristol, Bath & the West</td>
+          <td></td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>50212</td>
+          <td></td>
+          <td>SN53 AVK</td>
+          <td>Transbus Dart SPD Plaxton Pointer 2</td>
+          <td>Lothian Buses</td>
+          <td></td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>50219</td>
+          <td></td>
+          <td>AA53 GHA</td>
+          <td>Dennis Dart MPD Plaxton Pointer 2</td>
+          <td></td>
+          <td class="notes">Transferred to Red Rose Travel</td>
+        </tr>
+        <tr class="withdrawn-row">
+          <td>50226</td>
+         	<td></td>
+          <td>LJ08 CZT</td>
+          <td>Alexander Dennis Enviro200</td>
+          <td>Travel London</td>
+          <td class="notes">Withdrawn</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    <p>© Bus Fleet Lists.online 2024</p>
+  </footer>
+</body>
+</html>
